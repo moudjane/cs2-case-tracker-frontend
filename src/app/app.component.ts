@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { PriceTrackerComponent } from './components/price-tracker/price-tracker.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [PriceTrackerComponent],
+  template: `<app-price-tracker></app-price-tracker>`,
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'cs-case-tracker-frontend';
-}
+export class AppComponent {}
